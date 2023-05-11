@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import { configureStore } from '@reduxjs/toolkit';
 import { getPosts } from './actions/post.action';
+import { getUser } from './actions/user.action';
 
 const store = configureStore({
 	reducer: rootReducer,
@@ -16,6 +17,8 @@ const store = configureStore({
 // Dispatch permet de dire ok lance moi telle action
 
 store.dispatch(getPosts());
+store.dispatch(getUser());
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	// Le store c'est l'endroit où les données seront stockées

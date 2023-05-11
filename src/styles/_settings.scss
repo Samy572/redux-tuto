@@ -41,3 +41,8 @@ input[type="submit"] {
   display: grid;
   grid-template-columns: 1fr 200px;
 }
+
+.post-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
